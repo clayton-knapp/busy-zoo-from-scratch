@@ -2,15 +2,18 @@
 import './App.css';
 import Brawl from './Brawl';
 import { useState } from 'react';
+import OpenSign from './OpenSign';
 
 function App() {
   // make state
   // 🦑
   const [squidPower, setSquidPower] = useState(10);
-  // // 🦀
+  // 🦀
   const [crabPower, setCrabPower] = useState(10);
 
+  const [isOpen, setIsOpen] = useState(true);
 
+  // console.log(isOpen);
 
   return (
     <>
@@ -55,6 +58,30 @@ function App() {
               Attack Squid!
             </button>
           </div>
+        </div>
+      </div>
+      <div className='sign-container'>
+        <OpenSign isOpen={isOpen}/>
+        {/* OPEN/CLOSE BUTTONS */}
+        <div className='buttons-container'>
+          {
+            (!isOpen) && <button
+              onClick={ ()=> {
+                setIsOpen(true);
+              }}
+            >
+            Open Zoo!
+            </button>
+          }
+          {
+            (isOpen) && <button
+              onClick={ ()=> {
+                setIsOpen(false);
+              }}
+            >
+            Close Zoo!
+            </button>
+          }
         </div>
       </div>
     </>
