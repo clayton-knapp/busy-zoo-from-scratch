@@ -1,24 +1,63 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Brawl from './Brawl';
+import { useState } from 'react';
 
 function App() {
+  // make state
+  // 🦑
+  const [squidPower, setSquidPower] = useState(10);
+  // // 🦀
+  const [crabPower, setCrabPower] = useState(10);
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Brawl />
+      <div className='brawl'>
+        <div className='fighting-pit'>
+          <span style={{ fontSize: `${squidPower}rem` }}>🦑</span>
+          <span style={{ fontSize: `${crabPower}rem` }}>🦀</span>
+        </div>
+        <div className='buttons-container'>
+          <div>
+            {/* Squid Buttons */}
+            <button
+              onClick={ ()=> {
+                setSquidPower(squidPower + 1);
+              }}
+            >
+              Boost Squid!
+            </button>
+            <button
+              onClick={ ()=> {
+                setCrabPower(crabPower - 1);
+              }}
+            >
+              Attack Crab!
+            </button>
+          </div>
+          <div>
+            {/* Crab Buttons */}
+            <button
+              onClick={ ()=> {
+                setCrabPower(crabPower + 1);
+              }}
+            >
+              Boost Crab!
+            </button>
+            <button
+              onClick={ ()=> {
+                setSquidPower(squidPower - 1);
+              }}
+            >
+              Attack Squid!
+            </button>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
 
