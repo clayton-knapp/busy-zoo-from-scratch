@@ -16,6 +16,8 @@ function App() {
 
   const [parade, setParade] = useState(['puffer', 'fish', 'dolphin', 'whale', 'shark', 'seal', 'lobster', 'squid', 'crab']);
 
+  const [parade2, setParade2] = useState(['crab', 'crab', 'squid', 'dolphin', 'crab', 'crab']);
+
   console.log(parade);
 
   return (
@@ -35,6 +37,12 @@ function App() {
         squidPower={squidPower}
         crabPower={crabPower}
         setParade = {setParade}
+      />
+      <Parade 
+        parade={parade2}
+        squidPower={squidPower}
+        crabPower={crabPower}
+        setParade = {setParade2}
       />
     </>
   );
