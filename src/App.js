@@ -20,130 +20,22 @@ function App() {
 
   return (
     <>
-      <div className='brawl'>
-        <Brawl 
-          squidPower = {squidPower}
-          crabPower = {crabPower}
-        />
-        <div className='buttons-container'>
-          <div>
-            {/* Squid Buttons */}
-            <button
-              onClick={ ()=> {
-                setSquidPower(squidPower + 1);
-              }}
-            >
-              Boost Squid!
-            </button>
-            <button
-              onClick={ ()=> {
-                setCrabPower(crabPower - 1);
-              }}
-            >
-              Attack Crab!
-            </button>
-          </div>
-          <div>
-            {/* Crab Buttons */}
-            <button
-              onClick={ ()=> {
-                setCrabPower(crabPower + 1);
-              }}
-            >
-              Boost Crab!
-            </button>
-            <button
-              onClick={ ()=> {
-                setSquidPower(squidPower - 1);
-              }}
-            >
-              Attack Squid!
-            </button>
-          </div>
-        </div>
-      </div>
-      <div className='sign-container'>
-        <OpenSign isOpen={isOpen}/>
-        {/* OPEN/CLOSE BUTTONS */}
-        <div className='buttons-container'>
-          {
-            (!isOpen) && <button
-              onClick={ ()=> {
-                setIsOpen(true);
-              }}
-            >
-            Open Zoo!
-            </button>
-          }
-          {
-            (isOpen) && <button
-              onClick={ ()=> {
-                setIsOpen(false);
-              }}
-            >
-            Close Zoo!
-            </button>
-          }
-        </div>
-      </div>
-      <div className='parade-container'>
-        <Parade 
-          parade={parade}
-          squidPower={squidPower}
-          crabPower={crabPower}
-        />
-        <div className='buttons-container'>
-          <button
-            onClick={ ()=> {
-              setParade([...parade, 'puffer']);
-            }}
-          >
-            Add Puffer
-          </button>
-          <button
-            onClick={ ()=> {
-              setParade([...parade, 'fish']);
-            }}
-          >
-            Add Fish
-          </button>
-          <button
-            onClick={ ()=> {
-              setParade([...parade, 'dolphin']);
-            }}
-          >
-            Add Dolphin
-          </button>
-          <button
-            onClick={ ()=> {
-              setParade([...parade, 'whale']);
-            }}
-          >
-            Add Whale
-          </button>
-          <button
-            onClick={ ()=> {
-              setParade([...parade, 'shark']);
-            }}
-          >
-            Add Shark
-          </button>
-          <button
-            onClick={ ()=> {
-              setParade([...parade, 'seal']);
-            }}
-          >
-            Add Seal
-          </button>
-          <button
-            onClick={ ()=> {
-              setParade([...parade, 'lobster']);
-            }}
-          >
-            Add Lobster
-          </button>
-        </div>
-      </div>
+      <Brawl
+        squidPower = {squidPower}
+        crabPower = {crabPower}
+        setSquidPower = {setSquidPower}
+        setCrabPower = {setCrabPower}
+      />
+      <OpenSign 
+        isOpen={isOpen}
+        setIsOpen={setIsOpen}
+      />
+      <Parade 
+        parade={parade}
+        squidPower={squidPower}
+        crabPower={crabPower}
+        setParade = {setParade}
+      />
     </>
   );
 }
