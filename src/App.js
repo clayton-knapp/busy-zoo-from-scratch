@@ -20,12 +20,11 @@ function App() {
 
   return (
     <>
-      <Brawl />
       <div className='brawl'>
-        <div className='fighting-pit'>
-          <span style={{ fontSize: `${squidPower}rem` }}>🦑</span>
-          <span style={{ fontSize: `${crabPower}rem` }}>🦀</span>
-        </div>
+        <Brawl 
+          squidPower = {squidPower}
+          crabPower = {crabPower}
+        />
         <div className='buttons-container'>
           <div>
             {/* Squid Buttons */}
