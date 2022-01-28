@@ -112,3 +112,7 @@ button {
 .closed {
   opacity: 0.2;
 }
+
+.parade {
+  border-bottom: dotted 1px aquamarine;
+}
