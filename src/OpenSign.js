@@ -21,7 +21,7 @@ export default function OpenSign({ isClosed, setIsClosed }) {
             setIsClosed(true);
           }}
         >
-            Close Zoo!
+            Close Aquarium!
         </button>
       }
       {
@@ -30,7 +30,7 @@ export default function OpenSign({ isClosed, setIsClosed }) {
             setIsClosed(false);
           }}
         >
-            Open Zoo!
+            Open Aquarium!
         </button>
       }
     </div>
