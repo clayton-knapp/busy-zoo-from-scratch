@@ -14,7 +14,7 @@ function App() {
 
   const [isOpen, setIsOpen] = useState(true);
 
-  const [parade, setParade] = useState(['puffer', 'fish', 'dolphin', 'whale', 'shark', 'seal', 'lobster']);
+  const [parade, setParade] = useState(['puffer', 'fish', 'dolphin', 'whale', 'shark', 'seal', 'lobster', 'squid', 'crab']);
 
   console.log(parade);
 
@@ -87,7 +87,11 @@ function App() {
         </div>
       </div>
       <div className='parade-container'>
-        <Parade parade={parade}/>
+        <Parade 
+          parade={parade}
+          squidPower={squidPower}
+          crabPower={crabPower}
+        />
         <div className='buttons-container'>
           <button
             onClick={ ()=> {
