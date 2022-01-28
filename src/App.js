@@ -12,7 +12,7 @@ function App() {
   // 🦀
   const [crabPower, setCrabPower] = useState(10);
 
-  const [isOpen, setIsOpen] = useState(true);
+  const [isClosed, setIsClosed] = useState(false);
 
   const [parade, setParade] = useState(['puffer', 'fish', 'dolphin', 'whale', 'shark', 'seal', 'lobster', 'squid', 'crab']);
 
@@ -27,22 +27,26 @@ function App() {
         crabPower = {crabPower}
         setSquidPower = {setSquidPower}
         setCrabPower = {setCrabPower}
+        isClosed = {isClosed}
       />
+
       <OpenSign 
-        isOpen={isOpen}
-        setIsOpen={setIsOpen}
+        isClosed={isClosed}
+        setIsClosed={setIsClosed}
       />
       <Parade 
         parade={parade}
         squidPower={squidPower}
         crabPower={crabPower}
         setParade = {setParade}
+        isClosed = {isClosed}
       />
       <Parade 
         parade={parade2}
         squidPower={squidPower}
         crabPower={crabPower}
         setParade = {setParade2}
+        isClosed = {isClosed}
       />
     </>
   );

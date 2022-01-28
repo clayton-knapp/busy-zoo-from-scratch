@@ -1,22 +1,22 @@
 import React from 'react';
 
-export default function Brawl({ squidPower, crabPower, setSquidPower, setCrabPower }) {
+export default function Brawl({ squidPower, crabPower, setSquidPower, setCrabPower, isClosed }) {
   return <div className='brawl'>
-    <div className='fighting-pit'>
+    <div className={`fighting-pit ${(isClosed) && 'closed'}`}>
       <span style={{ fontSize: `${squidPower}rem` }}>🦑</span>
       <span style={{ fontSize: `${crabPower}rem` }}>🦀</span>
     </div>
     <div className='buttons-container'>
       <div>
         {/* Squid Buttons */}
-        <button
+        <button disabled={isClosed}
           onClick={ ()=> {
             setSquidPower(squidPower + 1);
           }}
         >
               Boost Squid!
         </button>
-        <button
+        <button disabled={isClosed}
           onClick={ ()=> {
             setCrabPower(crabPower - 1);
           }}
@@ -26,14 +26,14 @@ export default function Brawl({ squidPower, crabPower, setSquidPower, setCrabPow
       </div>
       <div>
         {/* Crab Buttons */}
-        <button
+        <button disabled={isClosed}
           onClick={ ()=> {
             setCrabPower(crabPower + 1);
           }}
         >
               Boost Crab!
         </button>
-        <button
+        <button disabled={isClosed}
           onClick={ ()=> {
             setSquidPower(squidPower - 1);
           }}

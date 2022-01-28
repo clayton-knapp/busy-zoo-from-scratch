@@ -1,10 +1,10 @@
 import React from 'react';
 import Animal from './Animal';
 
-export default function Parade({ parade, squidPower, crabPower, setParade }) {
+export default function Parade({ parade, squidPower, crabPower, setParade, isClosed }) {
   return (
     <div className ='parade-container'>
-      <div className ='parade'>
+      <div className ={`parade ${(isClosed) && 'closed'}`}>
         {
           parade.map((eachAnimal, i)=> 
             <Animal 
@@ -17,49 +17,49 @@ export default function Parade({ parade, squidPower, crabPower, setParade }) {
         }
       </div>
       <div className='buttons-container'>
-        <button
+        <button disabled={isClosed}
           onClick={ ()=> {
             setParade([...parade, 'puffer']);
           }}
         >
             Add Puffer
         </button>
-        <button
+        <button disabled={isClosed}
           onClick={ ()=> {
             setParade([...parade, 'fish']);
           }}
         >
             Add Fish
         </button>
-        <button
+        <button disabled={isClosed}
           onClick={ ()=> {
             setParade([...parade, 'dolphin']);
           }}
         >
             Add Dolphin
         </button>
-        <button
+        <button disabled={isClosed}
           onClick={ ()=> {
             setParade([...parade, 'whale']);
           }}
         >
             Add Whale
         </button>
-        <button
+        <button disabled={isClosed}
           onClick={ ()=> {
             setParade([...parade, 'shark']);
           }}
         >
             Add Shark
         </button>
-        <button
+        <button disabled={isClosed}
           onClick={ ()=> {
             setParade([...parade, 'seal']);
           }}
         >
             Add Seal
         </button>
-        <button
+        <button disabled={isClosed}
           onClick={ ()=> {
             setParade([...parade, 'lobster']);
           }}

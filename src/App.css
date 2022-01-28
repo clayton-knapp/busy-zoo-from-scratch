@@ -108,3 +108,7 @@ button {
   font-size: 2rem;
   margin: 5px;
 }
+
+.closed {
+  opacity: 0.2;
+}
