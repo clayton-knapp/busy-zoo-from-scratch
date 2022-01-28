@@ -3,6 +3,7 @@ import './App.css';
 import Brawl from './Brawl';
 import { useState } from 'react';
 import OpenSign from './OpenSign';
+import Parade from './Parade';
 
 function App() {
   // make state
@@ -87,6 +88,7 @@ function App() {
         </div>
       </div>
       <div className='parade-container'>
+        <Parade parade={parade}/>
         <div className='buttons-container'>
           <button
             onClick={ ()=> {
