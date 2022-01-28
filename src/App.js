@@ -18,8 +18,6 @@ function App() {
 
   const [parade2, setParade2] = useState(['crab', 'crab', 'squid', 'dolphin', 'crab', 'crab']);
 
-  console.log(parade);
-
   return (
     <>
       <Brawl
