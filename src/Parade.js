@@ -1,10 +1,21 @@
 import React from 'react';
 import Animal from './Animal';
+import { useState } from 'react';
 
-export default function Parade({ parade, squidPower, crabPower, setParade, isClosed }) {
+export default function Parade({ 
+  parade, 
+  squidPower, 
+  crabPower, 
+  setParade, 
+  isClosed 
+}) {
+
   return (
     <div className ='parade-container'>
-      <div className ={`parade ${(isClosed) && 'closed'}`}>
+      <div 
+        className ={`parade ${(isClosed) && 'closed'}`}
+        title='parade-container'
+      >
         {
           parade.map((eachAnimal, i)=> 
             <Animal 
