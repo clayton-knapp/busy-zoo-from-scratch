@@ -14,9 +14,9 @@ function App() {
 
   const [isClosed, setIsClosed] = useState(false);
 
-  const [parade, setParade] = useState(['puffer', 'fish', 'dolphin', 'whale', 'shark', 'seal', 'lobster', 'squid', 'crab']);
+  // const [parade, setParade] = useState(['puffer', 'fish', 'dolphin', 'whale', 'shark', 'seal', 'lobster', 'squid', 'crab']);
 
-  const [parade2, setParade2] = useState(['crab', 'crab', 'squid', 'dolphin', 'crab', 'crab']);
+  // const [parade2, setParade2] = useState(['crab', 'crab', 'squid', 'dolphin', 'crab', 'crab']);
 
   return (
     <>
@@ -32,18 +32,18 @@ function App() {
         isClosed={isClosed}
         setIsClosed={setIsClosed}
       />
-      <Parade 
+      {/* <Parade 
         parade={parade}
         squidPower={squidPower}
         crabPower={crabPower}
         setParade = {setParade}
         isClosed = {isClosed}
-      />
+      /> */}
       <Parade 
-        parade={parade2}
+        // parade={parade2}
         squidPower={squidPower}
         crabPower={crabPower}
-        setParade = {setParade2}
+        // setParade = {setParade2}
         isClosed = {isClosed}
       />
     </>
