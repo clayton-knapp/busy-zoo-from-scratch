@@ -3,13 +3,12 @@ import Animal from './Animal';
 import { useState } from 'react';
 
 export default function Parade({ 
-  // parade, 
+  parade, 
   squidPower, 
   crabPower, 
-  // setParade, 
+  setParade, 
   isClosed 
 }) {
-  const [parade, setParade] = useState(['crab', 'crab', 'squid', 'dolphin', 'crab', 'crab']);
 
   return (
     <div className ='parade-container'>

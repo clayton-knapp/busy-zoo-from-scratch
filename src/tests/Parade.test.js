@@ -1,9 +1,10 @@
 import { fireEvent, render, screen } from '@testing-library/react';
 import Parade from '../Parade.js';
+import App from '../App.js';
 
 test('test to see if we pass in an array of animal names if the emojis will be rendered', () => {
   render(<Parade 
-    // parade={['crab', 'crab', 'squid', 'dolphin', 'crab', 'crab']}
+    parade={['crab', 'crab', 'squid', 'dolphin', 'crab', 'crab']}
   />);
   const paradeEl = screen.getByTitle('parade-container');
   expect(paradeEl.textContent).toBe('🦀🦀🦑🐬🦀🦀');
@@ -11,8 +12,8 @@ test('test to see if we pass in an array of animal names if the emojis will be r
 
 
 test('test to see if we click seal if seal emoji show sup in parade', () => {
-  render(<Parade 
-    parade={['']}
+  render(<App 
+    // parade={['']}
   />);
   const paradeEl = screen.getByTitle('parade-container');
   const addSealBtn = screen.getByText('Add Seal');
@@ -25,8 +26,8 @@ test('test to see if we click seal if seal emoji show sup in parade', () => {
 
 
 test('test to see if we click multiple things if correct emojis show up', () => {
-  render(<Parade 
-    parade={['']}
+  render(<App 
+    // parade={['']}
   />);
   const paradeEl = screen.getByTitle('parade-container');
   const addSealBtn = screen.getByText('Add Seal');

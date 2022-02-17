@@ -5,7 +5,7 @@ export default function OpenSign({ isClosed, setIsClosed }) {
 
   return <div className='sign-container'>
     <div className='sign'>
-      <img src=
+      <img alt='sign' src=
         {
           (isClosed)
             ? '/sign-closed.jpeg'
